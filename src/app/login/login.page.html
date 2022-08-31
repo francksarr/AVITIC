@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <img class="ion-text-center" src="./assets/icon/vet.jpg"/>
+  <ion-card>
+    <ion-label><b>Email</b></ion-label>
+    <ion-input placeholder="Entrez votre email"></ion-input>
+    <ion-label><b>Mot de passe</b></ion-label>
+    <ion-input type="password" placeholder="Entrez votre mot de passe"></ion-input>
+    <ion-button (click)="login()" expand="block" color="primary" routerLink="/accueil">Connexion</ion-button>
+    <p style="text-align: center;">ou</p>
+    <ion-button (click)="signup()" expand="block" color="tertiary" routerLink="/inscription">Inscription</ion-button>
+  </ion-card>
+  
+</ion-content>

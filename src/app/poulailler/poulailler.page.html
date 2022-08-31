@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>poulailler</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        {{su.nom_sujet}}
+      </ion-card-title>
+    </ion-card-header>
+  </ion-card>
+  <ion-list>
+    <ion-item>
+      <ion-label>Nom poulailler:</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-select interface="action-sheet" class="select-full-width">
+      <ion-select-option *ngFor="let p of poulailler" [value]="p"> 
+        {{p.nom_poulailler}} 
+       </ion-select-option>
+       </ion-select>
+    </ion-item>
+    <ion-item> 
+      <ion-label>client:</ion-label>
+    </ion-item>
+    <ion-item> 
+      <ion-select interface="action-sheet" class="select-full-width">  
+        <ion-select-option *ngFor="let c of clients" [value]="c"> 
+         {{c.nom}} 
+        </ion-select-option>
+      </ion-select>
+    </ion-item> 
+    <ion-item>
+      <ion-label>Quantité:</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-input type="number"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Date:</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-input type="date"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-row>
+    <ion-col>
+    <ion-button color="success" routerLink="/accueil">Enregistrer</ion-button>
+    </ion-col>
+    <ion-col>
+    <ion-button routerLink="/accueil">Annuler</ion-button>
+  </ion-col>
+  </ion-row>
+  
+    
+</ion-content>

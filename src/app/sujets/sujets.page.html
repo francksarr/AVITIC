@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>sujets</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card color="primary" *ngFor="let s of sujets" [routerLink]="'/poulailler/'+ s.idsujet">
+    <ion-label>
+      <h2>{{s.nom_sujet}}</h2>
+    </ion-label>
+    </ion-card>
+</ion-content>

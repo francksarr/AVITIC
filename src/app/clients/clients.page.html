@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>clients</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card color="primary" *ngFor="let c of clients" [routerLink]="'/edit-clients/'+ c.idclient">
+      <ion-label>
+        <h2 >Nom: {{c.nom}}</h2>
+        <h3>Tel: {{c.numero}}</h3>
+        <h4> Adresse: {{c.adresse}}</h4>
+      </ion-label>
+    
+</ion-card>
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fab-button>
+    <ion-icon routerLink="/add-clients" name="add"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+<ion-col>
+  <ion-button routerLink="/accueil">Quitter</ion-button>
+</ion-col>
+</ion-content>
